@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TV Banner: 320x180 dp, displayed on Android TV home screen -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <gradient
+        android:startColor="#0A0E1A"
+        android:endColor="#1E3A6E"
+        android:angle="135" />
+</shape>
