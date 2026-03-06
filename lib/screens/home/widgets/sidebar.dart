@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../providers/playlist_provider.dart';
@@ -86,7 +84,7 @@ class _TVSidebarState extends ConsumerState<TVSidebar>
           width: _widthAnimation.value,
           decoration: BoxDecoration(
             color: AppTheme.surface,
-            border: Border(
+            border: const Border(
               right: BorderSide(color: AppTheme.divider, width: 1),
             ),
           ),
@@ -134,7 +132,7 @@ class _TVSidebarState extends ConsumerState<TVSidebar>
                     Padding(
                       padding: const EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: Divider(
+                      child: const Divider(
                           color: AppTheme.divider, height: 1),
                     ),
 
@@ -320,7 +318,7 @@ class _TVSidebarState extends ConsumerState<TVSidebar>
 
   Widget _buildBottomActions() {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         border: Border(top: BorderSide(color: AppTheme.divider)),
       ),
       child: Column(

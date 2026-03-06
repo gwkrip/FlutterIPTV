@@ -185,9 +185,9 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                                 const Icon(Icons.error_outline,
                                     color: AppTheme.error, size: 36),
                                 const SizedBox(height: 12),
-                                Text(
+                                const Text(
                                   'No playlist configured',
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     color: AppTheme.onSurface,
                                     fontSize: 14,
                                   ),

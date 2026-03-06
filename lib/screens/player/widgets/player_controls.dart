@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../../../core/theme/app_theme.dart';
-import '../../../core/constants/app_constants.dart';
 import '../../../providers/player_provider.dart';
 import '../../../widgets/common/tv_focus_widget.dart';
 
@@ -217,12 +215,12 @@ class _PlayerControlsState extends ConsumerState<PlayerControls>
         SliderTheme(
           data: SliderTheme.of(context).copyWith(
             trackHeight: 4,
-            thumbRadius: 8,
             thumbColor: AppTheme.primary,
             activeTrackColor: AppTheme.primary,
             inactiveTrackColor: Colors.white30,
-            overlayRadius: 16,
             overlayColor: AppTheme.primary.withOpacity(0.3),
+            thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 8),
+            overlayShape: const RoundSliderOverlayShape(overlayRadius: 16),
           ),
           child: Slider(
             value: progress.clamp(0.0, 1.0),
@@ -318,10 +316,10 @@ class _PlayerControlsState extends ConsumerState<PlayerControls>
               child: SliderTheme(
                 data: SliderTheme.of(context).copyWith(
                   trackHeight: 3,
-                  thumbRadius: 6,
                   thumbColor: Colors.white,
                   activeTrackColor: Colors.white,
                   inactiveTrackColor: Colors.white30,
+                  thumbShape: const RoundSliderThumbShape(enabledThumbRadius: 6),
                 ),
                 child: Slider(
                   value: playerState.isMuted ? 0 : playerState.volume,

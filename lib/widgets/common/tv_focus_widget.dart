@@ -52,9 +52,7 @@ class _TVFocusWidgetState extends State<TVFocusWidget>
     _focusNode.addListener(_onFocusChange);
 
     _animController = AnimationController(
-      duration: AppTheme == null
-          ? const Duration(milliseconds: 200)
-          : const Duration(milliseconds: 200),
+      duration: const Duration(milliseconds: 200),
       vsync: this,
     );
 
@@ -101,7 +99,7 @@ class _TVFocusWidgetState extends State<TVFocusWidget>
   Widget build(BuildContext context) {
     final focusColor = widget.focusColor ?? AppTheme.focusedBorder;
     final borderRadius =
-        widget.borderRadius ?? BorderRadius.circular(AppTheme.borderRadius);
+        widget.borderRadius ?? BorderRadius.circular(12.0);
 
     return Focus(
       focusNode: _focusNode,

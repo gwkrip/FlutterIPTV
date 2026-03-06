@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import '../../core/theme/app_theme.dart';
@@ -80,7 +79,7 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
       padding: const EdgeInsets.fromLTRB(24, 20, 24, 16),
       decoration: BoxDecoration(
         color: AppTheme.surface,
-        border: Border(bottom: BorderSide(color: AppTheme.divider)),
+        border: const Border(bottom: BorderSide(color: AppTheme.divider)),
       ),
       child: Row(
         children: [
@@ -178,13 +177,13 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
   }
 
   Widget _buildEmptyState() {
-    return Center(
+    return const Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Icon(Icons.search_rounded, size: 80, color: AppTheme.onSurface),
-          const SizedBox(height: 16),
-          const Text(
+          Icon(Icons.search_rounded, size: 80, color: AppTheme.onSurface),
+          SizedBox(height: 16),
+          Text(
             'Search for channels',
             style: TextStyle(
               fontSize: 20,
@@ -192,8 +191,8 @@ class _SearchScreenState extends ConsumerState<SearchScreen> {
               color: AppTheme.onBackground,
             ),
           ),
-          const SizedBox(height: 8),
-          const Text(
+          SizedBox(height: 8),
+          Text(
             'Type a channel name or category',
             style: TextStyle(color: AppTheme.onSurface),
           ),

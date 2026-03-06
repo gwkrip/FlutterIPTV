@@ -57,7 +57,7 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
       width: 240,
       decoration: BoxDecoration(
         color: AppTheme.surface,
-        border: Border(right: BorderSide(color: AppTheme.divider)),
+        border: const Border(right: BorderSide(color: AppTheme.divider)),
       ),
       child: Column(
         children: [
@@ -538,7 +538,7 @@ class _PlayerSection extends StatelessWidget {
             ),
           ),
           _buildSettingItem(
-            icon: Icons.buffer,
+            icon: Icons.hourglass_bottom_rounded,
             title: 'Buffer Size',
             subtitle: 'Pre-load video data (5 seconds)',
             trailing: const Text('5s',
