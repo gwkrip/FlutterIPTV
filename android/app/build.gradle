@@ -73,12 +73,15 @@ android {
             } else {
                 signingConfig signingConfigs.debug
             }
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
         }
         debug {
             applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
+            minifyEnabled false
+            shrinkResources false
         }
     }
 }
