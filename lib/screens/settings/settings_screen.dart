@@ -55,9 +55,9 @@ class _SettingsScreenState extends ConsumerState<SettingsScreen> {
   Widget _buildSectionNav() {
     return Container(
       width: 240,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppTheme.surface,
-        border: const Border(right: BorderSide(color: AppTheme.divider)),
+        border: Border(right: BorderSide(color: AppTheme.divider)),
       ),
       child: Column(
         children: [

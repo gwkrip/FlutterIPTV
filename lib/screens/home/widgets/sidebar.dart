@@ -82,9 +82,9 @@ class _TVSidebarState extends ConsumerState<TVSidebar>
       builder: (context, child) {
         return Container(
           width: _widthAnimation.value,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             color: AppTheme.surface,
-            border: const Border(
+            border: Border(
               right: BorderSide(color: AppTheme.divider, width: 1),
             ),
           ),
@@ -129,20 +129,20 @@ class _TVSidebarState extends ConsumerState<TVSidebar>
                     ),
 
                     // Divider
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
+                    const Padding(
+                      padding: EdgeInsets.symmetric(
                           horizontal: 16, vertical: 8),
-                      child: const Divider(
+                      child: Divider(
                           color: AppTheme.divider, height: 1),
                     ),
 
                     // Dynamic categories
                     if (_isExpanded)
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(16, 4, 16, 8),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(16, 4, 16, 8),
                         child: Text(
                           'CATEGORIES',
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w700,
                             color: AppTheme.onSurface,
@@ -201,8 +201,8 @@ class _TVSidebarState extends ConsumerState<TVSidebar>
               ),
               if (_isExpanded) ...[
                 const SizedBox(width: 12),
-                Expanded(
-                  child: const Text(
+                const Expanded(
+                  child: Text(
                     'Flutter IPTV',
                     style: TextStyle(
                       fontSize: 16,

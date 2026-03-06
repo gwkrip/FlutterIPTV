@@ -106,9 +106,9 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     return Container(
       height: 64,
       padding: const EdgeInsets.symmetric(horizontal: 24),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: AppTheme.surface,
-        border: const Border(
+        border: Border(
           bottom: BorderSide(color: AppTheme.divider),
         ),
       ),
